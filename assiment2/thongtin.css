@@ -1,0 +1,30 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid#cccccc;
+    border-radius: 5px;
+}
+.form-section {
+    margin-bottom: 20px;
+}
+.submit-btn {
+    background-color: #ccc;
+    padding: 10px;
+    border: none;
+    cursor: not-allowed;
+}
+.color-input {
+    height: 30px;
+}

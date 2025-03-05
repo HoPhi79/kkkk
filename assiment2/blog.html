@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Images and Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            width: 90%;
+            margin-top: 20px;
+        }
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .videos {
+            margin-top: 20px;
+        }
+        .videos iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            margin-bottom: 20px;
+        }
+        .videos {
+            margin-top: 20px;
+        }
+        .videos video {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BLOG CỦA TÔI</h1>
+    <div>
+        <button class="back-button" onclick="location.href='index.html'">Quay lại trang chủ</button>
+    </div>
+    
+    <div class="grid-container">
+        <div class="grid-item"><img src="0.jpg" alt="Image 1"></div>
+        <div class="grid-item"><img src="NP_02455.jpg" alt="Image 2"></div>
+        <div class="grid-item"><img src="NP_02654.jpg" alt="Image 3"></div>
+        <div class="grid-item"><img src="NP_02681.jpg" alt="Image 4"></div>
+        <div class="grid-item"><img src="NP_02654.jpg" alt="Image 3"></div>
+        <!-- Add more images as needed -->
+    </div>
+    <div class="videos">
+        <video autoplay loop muted>
+            <source src="jjj.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+    <div>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/r05OdpSRmyY?si=seOIuMjGdrFSaMwS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+    </iframe>
+
+    </div>
+   
+</body>
+</html>

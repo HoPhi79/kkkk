@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 50%;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .form-group img {
+            max-width: 100px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Thông tin cá nhân</h2>
+        <div>
+            <button class="back-button" onclick="location.href='index.html'">Quay lại trang chủ</button>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="last-name">Họ:</label>
+                <input type="text" id="last-name" name="last-name" value="Ho">
+            </div>
+            <div class="form-group">
+                <label for="first-name">Tên:</label>
+                <input type="text" id="first-name" name="first-name" value="Phi">
+            </div>
+            <div class="form-group">
+                <label for="gender">Giới tính:</label>
+                <select id="gender" name="gender">
+                    <option value="male" selected>Nam</option>
+                    <option value="female">Nữ</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="school">Trường đang học:</label>
+                <input type="text" id="school" name="school" value="Trường Cao Đẳng FPT PoLyTechNic">
+            </div>
+            <div class="form-group">
+                <label for="student-id">Mã sinh viên:</label>
+                <input type="text" id="student-id" name="student-id" value="PD11644">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="phih79@example.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" value="0865862855">
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Sở thích:</label>
+                <input type="text" id="hobbies" name="hobbies" value="Đọc sách, Chơi Bóng đá">
+            </div>
+            <div class="form-group">
+                <label for="favorite-color">Màu sắc yêu thích:</label>
+                <input type="color" id="favorite-color" name="favorite-color" value="#00544">
+            </div>
+            <div class="form-group">
+                <label for="profile-picture">Hình ảnh đại diện:</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+                <img id="profile-picture-preview" src="#" alt="Preview Image" style="display:none;">
+            </div>
+            <div class="form-group">
+                <label for="hometown">Quê quán:</label>
+                <input type="text" id="hometown" name="hometown" value="Quảng Nam">
+            </div>
+            <div class="form-group">
+                <label for="major">Chuyên ngành:</label>
+                <input type="text" id="major" name="major" value="Công nghệ thông tin">
+            </div>
+            <div class="form-group">
+                <label for="programming-languages">Ngôn ngữ lập trình đã biết:</label>
+                <input type="text" id="programming-languages" name="programming-languages" value="Python, JavaScript, C++">
+            </div>
+            <div class="form-group">
+                <label for="experience">Kinh nghiệm chuyên ngành:</label>
+                <textarea id="experience" name="experience">- Tham gia các dự án phần mềm mã nguồn mở
+- Thực tập tại công ty ABC chuyên về phát triển web</textarea>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('profile-picture').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('profile-picture-preview');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
